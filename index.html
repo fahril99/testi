@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni Script Bot WA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(to right, #007bff, #0056b3);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .testimonials {
+            position: relative;
+            margin-top: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+        .carousel img {
+            min-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .carousel-buttons button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.2em;
+            transition: transform 0.2s ease;
+        }
+        .carousel-buttons button:hover {
+            transform: scale(1.2);
+        }
+        .cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .cta p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #007bff;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { color: #007bff; }
+            50% { color: #0056b3; }
+        }
+        .cta a {
+            text-decoration: none;
+            background: linear-gradient(to right, #28a745, #218838);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.3em;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s;
+        }
+        .cta a:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(to right, #218838, #28a745);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>
+        Script Bot WA
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 19 19" fill="currentColor" aria-hidden="true" style="display:inline-block; vertical-align:middle; margin-left:10px; width:32px; height:32px;">
+            <path d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
+        </svg>
+    </h1>
+    <p>Banyak pelanggan telah terbantu meningkatkan bot WhatsApp mereka dengan script bot WhatsApp ini!</p>
+</header>
+    
+    <div class="container">
+        <div class="testimonials">
+            <div class="carousel" id="carousel">
+                <img src="https://h.top4top.io/p_328478ogd1.jpg" alt="Testimoni 1">
+                <img src="https://i.top4top.io/p_3284vktsk2.jpg" alt="Testimoni 2">
+                <img src="https://j.top4top.io/p_3284wxx5b3.jpg" alt="Testimoni 3">
+                <img src="https://k.top4top.io/p_3284n29464.jpg" alt="Testimoni 4">
+                <img src="https://c.top4top.io/p_3284rv8b91.jpg" alt="Testimoni 5">
+            </div>
+            <div class="carousel-buttons">
+                <button onclick="prevSlide()">&#8249;</button>
+                <button onclick="nextSlide()">&#8250;</button>
+            </div>
+        </div>
+
+        <div class="cta">
+            <p>Pesan sekarang untuk meningkatkan efisiensi bisnis Anda dengan solusi canggih kami!</p>
+            <a href="https://wa.me/6285876902820" target="_blank">Pesan Sekarang</a>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const carousel = document.getElementById('carousel');
+        const images = carousel.getElementsByTagName('img');
+        const totalSlides = images.length;
+
+        function updateSlidePosition() {
+            const offset = -currentIndex * 100;
+            carousel.style.transform = translateX(${offset}%);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlidePosition();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlidePosition();
+        }
+    </script>
+</body>
+</html>
