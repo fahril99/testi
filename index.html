@@ -23,6 +23,7 @@
             background: linear-gradient(to right, #007bff, #0056b3);
             color: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
         header h1 {
             margin: 0;
             font-size: 3em;
@@ -105,7 +106,7 @@
     </style>
 </head>
 <body>
-   <header>
+    <header>
     <h1>
         Testimoni Script Bot WA
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display:inline-block; vertical-align:middle; margin-left:10px; width:32px; height:32px;">
@@ -114,7 +115,6 @@
     </h1>
     <p>Banyak pelanggan telah terbantu meningkatkan bot WhatsApp mereka dengan script bot WhatsApp ini!</p>
 </header>
-
     
     <div class="container">
         <div class="testimonials">
@@ -145,7 +145,7 @@
 
         function updateSlidePosition() {
             const offset = -currentIndex * 100;
-            carousel.style.transform = `translateX(${offset}%)`;
+            carousel.style.transform = translateX(${offset}%);
         }
 
         function nextSlide() {
